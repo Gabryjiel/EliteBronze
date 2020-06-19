@@ -1,0 +1,31 @@
+{
+  "name": "EliteBronze",
+  "version": "1.0.0",
+  "description": "React + Express.js webapp",
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {
+    "start": "node express",
+    "build": "cd reactjs/ && npm install && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "reactjs/node_modules"
+  ],
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gabryjiel/EliteBronze.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "license": "MIT",
+  "devDependencies": {}
+}

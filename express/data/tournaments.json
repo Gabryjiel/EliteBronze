@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Elite Bronze",
+        "startDate": "2016-01-02",
+        "endDate": "2016-01-02"
+    },
+    {
+        "name": "Elite Bronze II",
+        "startDate": "2016-01-24",
+        "endDate": "2016-01-24"
+    },
+    {
+        "name": "Elite Bronze III",
+        "startDate": "2017-11-12",
+        "endDate": "2017-11-12"
+    },
+    {
+        "name": "Elite Bronze IV",
+        "startDate": "2017-12-09",
+        "endDate": "2018-01-12"
+    },
+    {
+        "name": "Elite Bronze V",
+        "startDate": "2020-03-2020",
+        "endDate": "2020-03-2020"
+    }
+]
