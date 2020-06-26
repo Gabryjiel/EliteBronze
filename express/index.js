@@ -8,8 +8,9 @@ const routes = require('./routes/index');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
 app.use(express.static(path.resolve(__dirname, '../reactjs/build')));
+
+app.disable('x-powered-by');
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
