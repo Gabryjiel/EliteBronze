@@ -1,24 +1,15 @@
 const router = require('express').Router();
 const db = require('../../db')
+const queries = require('./queries/tournaments')
 
-router.get('/', (req, res, next) => {
-    db.query(`SELECT *
-    FROM eb.matches m
-    JOIN eb.player p ON p.id = m.blueplayerid
-    JOIN eb.player p1 ON p1.id = m.redplayerid
-    WHERE m.id = 1;`, [], (error ,response) => {
-        if(error)
-            return next(error)
-        return res.json(response.rows)
-    })
+router.get('/', async (req, res) => {
+    const { rows } = await db.query(queries.getTournaments, [])
+    return res.status(200).json(rows)
 })
 
-router.get('/:id', (req, res, next) => {
-    db.query('SELECT * FROM eb.tournament WHERE id = $1', [req.params.id], (error, response) => {
-        if(error)
-            return next(error)
-        return res.json(response.rows)
-    })
+router.get('/:id', async (req, res) => {
+   const all =  (await db.query(queries.getTournamentsById, [req.params.id])).rows[0]
+   return res.status(200).json(all)
 })
 
 module.exports = router;
