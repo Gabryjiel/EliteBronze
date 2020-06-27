@@ -1,4 +1,4 @@
-const { Pool } = require('pg')
+const { Client } = require('pg')
 
 require('dotenv').config()
 
@@ -12,15 +12,19 @@ if(process.env.NODE_ENV == 'development')
       'port': process.env.DB_PORT
   }
 else if(process.env.NODE_ENV == 'production')
-  config ={
-    connectionString: process.env.DB_URI
+    config = {
+      'connectionString': process.env.DB_URI,
+      'ssl': {
+        rejectUnauthorized: false
+      }
   }
 
 console.log(config)
-const pool = new Pool(config)
+const client = new Client(config)
+client.connect();
 
 module.exports = {
   query: (text, params) => {
-    return pool.query(text, params)
+    return client.query(text, params)
   },
 }
