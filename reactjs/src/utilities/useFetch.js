@@ -4,8 +4,9 @@ const useFetch = (url, options, defaultValue = null) => {
     const [data, setData] = useState(defaultValue);
 
     useEffect(() => {
+        const env = window.location.href.includes('localhost') ? 'http://localhost:3001' : 'https://elitebronze.herokuapp.com/'
         const fetchData = async () => {
-            fetch(`http://localhost:3001/api/${url}`)
+            fetch(`${env}/api/${url}`)
                 .then(response => response.json())
                 .then(response => {
                     console.log(response)

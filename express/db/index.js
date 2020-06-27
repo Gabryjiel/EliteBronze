@@ -19,7 +19,6 @@ else if(process.env.NODE_ENV == 'production')
       }
   }
 
-console.log(config)
 const client = new Client(config)
 client.connect();
 
