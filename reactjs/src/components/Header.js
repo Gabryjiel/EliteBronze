@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-
-import "./Header.css"
 
 export default function Header (props){
 
-    const history = useHistory();
-
+    const history = useHistory()
     const goTo = path => {
         history.push(path);
     }

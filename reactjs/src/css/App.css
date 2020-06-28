@@ -1,8 +1,50 @@
+:root{
+    --primary: #361F00;
+    --secondary: #F6F38E;
+    --tertiary: #7F4311;
+    --background: #FFF3EB;
+    --background2: #FFE9D6;
+}
+
 .app_main{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 10px 10vw;
-    background-color: aquamarine;
+    background-color: var(--background);
     height: 90vh;
+}
+
+.header{
+    text-decoration: none;
+    list-style-type: none;
+    height: 50px;
+    background-color: var(--background2);
+    position: sticky;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.header-item{
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 5%;
+    height: 70%;
+    width: 100px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+
+}
+
+.header-item:hover{
+    background-color: var(--tertiary);
+    cursor: pointer;
+}
+
+.header-item-grow{
+    flex-grow: 1;
 }

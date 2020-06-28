@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "../../utilities/useFetch";
+import useFetch from "../utilities/useFetch";
 
 export default function TournamentList(props){
 
