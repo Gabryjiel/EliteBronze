@@ -67,7 +67,7 @@
     margin: 1vh 0;
     display: grid;
     padding: 0 25px;
-    grid-template-columns: 95px 6fr 2fr;
+    grid-template-columns: 95px 4fr 2fr;
     grid-template-rows: 50px 45px;
     column-gap: 10px;
 }
@@ -101,8 +101,12 @@
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 6fr;
-    align-items: center;
-    justify-items: center;
+    align-items: start;
+    justify-items: start;
+}
+
+.list-card-item-aside div span{
+    margin-left: 5px;
 }
 
 .fill-gold{ fill: rgb(105, 77, 44);}

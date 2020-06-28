@@ -25,15 +25,15 @@ export default function TournamentListItem({element}){
                     <>
                         <div>
                             <Trophy onClick={() => goTo('/stats')} fill="goldenrod"/>
-                            <span onClick={() => goTo('/')}>pierwszy</span>
+                            <span onClick={() => goTo('/')}>{element.first}</span>
                         </div>
                         <div>
                             <Trophy onClick={() => goTo('/stats')} fill="silver"/>
-                            <span onClick={() => goTo('/')}>drugi</span>
+                            <span onClick={() => goTo('/')}>{element.second}</span>
                         </div>
                         <div>
                             <Trophy onClick={() => goTo('/stats')} fill="#F06C00"/>
-                            <span onClick={() => goTo('/')}>trzeci</span>
+                            <span onClick={() => goTo('/')}>{element.third}</span>
                         </div>
                     </>
                 : 
