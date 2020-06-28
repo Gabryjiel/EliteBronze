@@ -1,7 +1,7 @@
 :root{
-    --primary: #361F00;
-    --secondary: #F6F38E;
-    --tertiary: #7F4311;
+    --primary: #7F4311;
+    --secondary: #f5ec72;
+    --tertiary: #a35617;
     --background: #FFF3EB;
     --background2: #FFE9D6;
 }
@@ -47,4 +47,66 @@
 
 .header-item-grow{
     flex-grow: 1;
+}
+
+.list-card{
+    width: 80%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-card-item{
+    width: 100%;
+    background-color: var(--primary);
+    border: 2px solid;
+    border-color: var(--tertiary);
+    color: var(--secondary);
+    border-radius: 25px;
+    margin: 1vh 0;
+    display: grid;
+    padding: 0 25px;
+    grid-template-columns: 95px 6fr 2fr;
+    grid-template-rows: 50px 45px;
+    column-gap: 10px;
+}
+
+.list-card-item:hover{
+    border-color: var(--primary);
+    background-color: var(--tertiary);
+    cursor: pointer;
+}
+
+.list-card-item-image{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    grid-row: span 2;
+    align-self: center;
+}
+
+.list-card-item-title{
+    font-size: x-large;
+}
+
+.list-card-item-aside{
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.list-card-item-aside div{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.fill-gold{ fill: rgb(105, 77, 44);}
+
+.list-card-items-details{
+
 }
