@@ -112,5 +112,5 @@
 .fill-gold{ fill: rgb(105, 77, 44);}
 
 .list-card-items-details{
-
+    color: var(--secondary);
 }

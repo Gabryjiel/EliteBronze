@@ -8,6 +8,7 @@ npm-debug.log
 .DS_Store
 /express/sql
 /express/data
+/.scannerwork
 
 # Docker
 Dockerfile

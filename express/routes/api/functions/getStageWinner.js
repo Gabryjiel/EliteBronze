@@ -9,7 +9,7 @@ function getStageWinner(matches){
         if(match.winner == player1.name)
             player1.counter = player1.counter + 1
         else
-        player2.counter = player2.counter + 1
+            player2.counter = player2.counter + 1
     })
         
     if(player1.counter > player2.counter)  

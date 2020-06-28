@@ -47,7 +47,6 @@ function getPodium(tours){
       delete el.winner
       delete el.stage
       delete el.loser
-      let el2 = 
       toursResults.push({...el, ...toursStandings[key]})
     })
     
