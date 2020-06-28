@@ -1,14 +1,16 @@
 import React from "react";
 import useFetch from "../utilities/useFetch";
 
+import TournamentListItem from "./TournamentListItem"
+
 export default function TournamentList(props){
 
     const { data } = useFetch('tournaments', null, []);
 
     return (
-        <div style={{height: "300px"}}>
+        <div className="list-card">
             {data.map(el => {
-                return <li key={el.name}>{el.name}</li>
+                return <TournamentListItem key={el.name} element={el} />
             })}
         </div>
     )
