@@ -1,23 +1,16 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 
 import {ReactComponent as Trophy} from "../icons/trophy.svg"
 
-export default function TournamentListItem({element}){
-
-    const history = useHistory()
-
-    const goTo = path => {
-        history.push(path)
-    }
+export default function TournamentListItem({element, goTo}){
 
     return(
         <div className="list-card-item">
-            <div className="list-card-item-image">
+            <div className="list-card-item-image" onClick={() => goTo(`/tournaments/${element.id}`)}>
                 {element.image && <img alt="" src={element.image}/>}
                 {!element.image && <div style={{background: "black", height: "100%", width: "100%"}}></div>}
             </div>
-            <div className="list-card-item-title">
+            <div className="list-card-item-title" onClick={() => goTo(`/tournaments/${element.id}`)}>
                 {element.name}
             </div>
             <div className="list-card-item-aside">
@@ -39,7 +32,7 @@ export default function TournamentListItem({element}){
                 : 
                     <div>Aktywny</div>}
             </div>
-            <div className="list-card-item-details">
+            <div className="list-card-item-details" onClick={() => goTo(`/tournaments/${element.id}`)}>
                 {element.enddate ?
                     <>
                         Data zakończenia: {element.enddate.slice(0,element.enddate.indexOf('T'))}
