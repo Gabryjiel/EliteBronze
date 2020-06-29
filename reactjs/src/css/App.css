@@ -114,3 +114,39 @@
 .list-card-items-details{
     color: var(--secondary);
 }
+
+.list-brackets{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    overflow: hidden;
+}
+
+.list-brackets-col{
+    background-color: red;
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+.list-brackets-col-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.list-brackets-col-title{
+    font-size: large;
+    text-align: center;
+}
+
+.list-brackets-col-item{
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    row-gap: 10px;
+}
+
