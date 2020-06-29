@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const db = require('../../db')
 const queries = require('./queries/tournaments')
+const matchQueries = require('./queries/matches')
 const getPodium = require('./functions/getPodium')
 
 router.get('/', async (req, res) => {
@@ -10,8 +11,8 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
-   const all =  (await db.query(queries.getTournamentsById, [req.params.id])).rows[0]
-   return res.status(200).json(all)
+   const { rows } = await db.query(matchQueries.getMatchesByTournamentId, [req.params.id])
+   return res.status(200).json(rows)
 })
 
 module.exports = router;
