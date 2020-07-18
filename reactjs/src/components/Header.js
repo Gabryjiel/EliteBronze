@@ -14,7 +14,7 @@ export default function Header (props){
             <li className="header-item-grow"></li>
             <li className="header-item" onClick={() => goTo("/tournaments")}>Turnieje</li>
             <li className="header-item" onClick={() => goTo('/stats')}>Statystyki</li>
-            <li className="header-item" onClick={() => goTo('/profile')}>Profil</li>
+            {/* <li className="header-item" onClick={() => goTo('/profile')}>Profil</li> */}
         </ul>
     )
 }
